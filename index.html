@@ -175,7 +175,7 @@
       box-shadow:var(--shadow-sm)}
     .scope-dark .scope-badge::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 0 4px rgba(47,184,75,.10)}
     .scope-dark .stage{display:grid; grid-template-columns:1fr 1fr; gap:16px}
-    .scope-dark .panel{background:linear-gradient(180deg,var(--paper) 0%, var(--paper-2) 100%); border:1px solid var(--line);
+    .scope-dark .panel{background:linear-gradient(180deg,#f6fbef 0%, #edf7e2 100%); border:1px solid #cfe2bf;
       border-radius:18px; overflow:hidden; position:relative; box-shadow:var(--shadow-sm)}
     .scope-dark .panel::before{content:""; position:absolute; left:0; right:0; top:0; height:52px;
       background:linear-gradient(180deg,rgba(255,255,255,.45),transparent)}
@@ -192,7 +192,7 @@
       box-shadow:0 0 14px 2px rgba(47,184,75,.7); animation:sweep 1s ease-out 1}
     @keyframes sweep{from{top:34px}to{top:100%}}
     .scope-dark .legend{display:grid; grid-template-columns:.9fr 1.1fr; gap:18px; align-items:center; margin-top:16px;
-      border:1px solid var(--line); border-radius:16px; background:var(--paper); padding:16px 18px; box-shadow:var(--shadow-sm)}
+      border:1px solid #bdd9a9; border-radius:16px; background:linear-gradient(180deg,#f8fdee 0%, #eff8df 100%); padding:16px 18px; box-shadow:var(--shadow-sm)}
     .scope-dark .legend-copy{display:flex; flex-direction:column; gap:6px}
     .scope-dark .legend-title{font-family:var(--disp); font-weight:700; font-size:21px; letter-spacing:-.02em; color:var(--bone)}
     .scope-dark .legend-note{font-size:13px; color:var(--ink-2)}
@@ -202,18 +202,20 @@
     .scope-dark .legend .ticks{display:flex; justify-content:space-between; margin-top:10px;
       font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--sage)}
     .scope-dark .console{display:grid; grid-template-columns:1.3fr .95fr; gap:16px; margin-top:16px}
-    .scope-dark .dcard{background:linear-gradient(180deg,var(--paper) 0%, var(--paper-2) 100%); border:1px solid var(--line);
+    .scope-dark .dcard{background:linear-gradient(180deg,#f8fdf2 0%, #eef7e3 100%); border:1px solid #cfe0c1;
       border-radius:18px; padding:18px 18px 20px; box-shadow:var(--shadow-sm)}
+    .scope-dark .console .dcard:first-child{background:linear-gradient(180deg,#eff9e7 0%, #e3f2d5 100%); border-color:#bdd6a9}
+    .scope-dark .console .dcard:last-child{background:linear-gradient(180deg,#f6fce9 0%, #ebf6d8 100%); border-color:#c9dfb6}
     .scope-dark .dcard h4{font-family:var(--mono); font-size:10.5px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--sage); margin:0 0 14px}
     .scope-dark .field{margin-bottom:16px}
     .scope-dark .field:last-child{margin-bottom:0}
     .scope-dark .field>label{display:block; font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--sage-dim); margin-bottom:9px}
     .scope-dark .seg{display:flex; gap:8px}
     .scope-dark .seg button{flex:1; font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:var(--ink-2);
-      background:var(--paper); border:1px solid var(--line); border-radius:11px; padding:10px 0; cursor:pointer; transition:.16s}
+      background:rgba(255,255,255,.72); border:1px solid #c8dcb8; border-radius:11px; padding:10px 0; cursor:pointer; transition:.16s}
     .scope-dark .seg button:hover{border-color:var(--leaf); color:var(--bone); transform:translateY(-1px)}
     .scope-dark .seg button[aria-pressed="true"]{background:var(--leaf); color:#fff; border-color:var(--leaf); font-weight:600; box-shadow:var(--shadow-sm)}
-    .scope-dark .slider-row{display:flex; align-items:center; gap:12px; padding:10px 12px; border-radius:12px; background:var(--paper); border:1px solid var(--line)}
+    .scope-dark .slider-row{display:flex; align-items:center; gap:12px; padding:10px 12px; border-radius:12px; background:#f8fdf2; border:1px solid #cfe0c1}
     .scope-dark input[type=range]{flex:1; -webkit-appearance:none; appearance:none; height:6px; border-radius:999px; background:linear-gradient(90deg,var(--red),var(--amber),var(--green)); outline:none}
     .scope-dark input[type=range]::-webkit-slider-thumb{-webkit-appearance:none; width:18px; height:18px; border-radius:50%;
       background:var(--bone); cursor:pointer; border:3px solid var(--surface); box-shadow:0 0 0 1px rgba(129,164,135,.45)}
@@ -225,17 +227,20 @@
       transition:.16s; display:inline-flex; align-items:center; gap:7px}
     .scope-dark .dbtn:hover{border-color:var(--leaf); color:var(--leaf-deep); transform:translateY(-1px)}
     .scope-dark .dbtn.ghost{background:transparent; color:var(--ink-2)}
-    .scope-dark .drop{margin-top:12px; border:2px dashed rgba(28,139,75,.35); border-radius:16px; padding:18px 16px; text-align:center;
+    .scope-dark .drop{margin-top:12px; border:2px dashed #2da25c; border-radius:16px; padding:18px 16px; text-align:center;
       font-size:13px; color:var(--ink-2); transition:.16s; cursor:pointer;
-      background:linear-gradient(180deg,#fcfef9 0%, #f2faec 100%);
-      box-shadow:inset 0 0 0 1px rgba(199,242,155,.45)}
-    .scope-dark .drop.over{border-color:var(--green); background:rgba(47,184,75,.12); color:var(--bone); transform:translateY(-1px)}
-    .scope-dark .drop b{display:block; color:var(--bone); font-weight:700; font-size:16px; margin-bottom:6px}
+      background:linear-gradient(180deg,#dff7d6 0%, #c9efbc 100%);
+      box-shadow:inset 0 0 0 1px rgba(47,184,75,.18)}
+    .scope-dark .drop.over{border-color:#187c40; background:linear-gradient(180deg,#bfeab1 0%, #9ddc8b 100%); color:var(--ink); transform:translateY(-1px)}
+    .scope-dark .drop b{display:block; color:#0f5a30; font-weight:800; font-size:16px; margin-bottom:6px}
     .scope-dark .drop .drop-sub{display:block; font-size:13px; color:var(--ink-2)}
     .scope-dark .drop-help{margin-top:9px; font-size:12px; color:var(--sage-dim)}
     .scope-dark .telemetry{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
     .scope-dark .read{display:flex; flex-direction:column; justify-content:space-between; gap:12px; min-height:132px;
       padding:16px; border-radius:14px; background:var(--paper); border:1px solid var(--line)}
+    .scope-dark .read:nth-child(1){background:linear-gradient(180deg,#e6f7d8 0%, #d4efc2 100%); border-color:#b8d8a6}
+    .scope-dark .read:nth-child(2){background:linear-gradient(180deg,#d7f0c6 0%, #c4e7ae 100%); border-color:#a9d08e}
+    .scope-dark .read:nth-child(3){background:linear-gradient(180deg,#f0fadf 0%, #dff0c3 100%); border-color:#c7deae}
     .scope-dark .read .k{font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--sage)}
     .scope-dark .read .v{font-family:var(--disp); font-weight:800; font-size:34px; line-height:1; letter-spacing:-.03em; color:var(--bone)}
     .scope-dark .read .v.sm{font-size:22px; font-family:var(--mono); font-weight:600; letter-spacing:.02em; color:var(--leaf-deep)}
@@ -247,11 +252,11 @@
 
     /* ---------- methodology ---------- */
     .method-card{margin-top:30px; border-radius:32px; overflow:hidden; background:
-      radial-gradient(90% 90% at 100% 0%, rgba(199,242,155,.16) 0%, transparent 40%),
-      linear-gradient(180deg,var(--paper) 0%,var(--paper-2) 100%);
-      border:1px solid var(--line);
+      radial-gradient(90% 90% at 100% 0%, rgba(199,242,155,.22) 0%, transparent 40%),
+      linear-gradient(180deg,#fbfef6 0%,#eef7e0 100%);
+      border:1px solid #d0e1bf;
       box-shadow:var(--shadow)}
-    .method-top{display:grid; grid-template-columns:1.08fr .92fr; gap:0; border-bottom:1px solid var(--line)}
+    .method-top{display:grid; grid-template-columns:1.08fr .92fr; gap:0; border-bottom:1px solid #d0e1bf}
     .method-visual{position:relative; min-height:420px; padding:26px; background:
       linear-gradient(180deg,rgba(239,244,230,.28),rgba(239,244,230,.84)),
       url("finca-de-aguacate-agricultura-precision-michocan_009.jpg") center/cover no-repeat}
@@ -268,19 +273,25 @@
     .method-visual p{margin:0; max-width:48ch; color:var(--ink-2); font-size:15px; line-height:1.65}
     .method-mini-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
     .method-chip{display:inline-flex; flex-direction:column; gap:4px; min-width:96px; padding:11px 12px; border-radius:16px;
-      background:rgba(255,255,255,.76); border:1px solid rgba(255,255,255,.5); backdrop-filter:blur(12px); box-shadow:var(--shadow-sm)}
+      backdrop-filter:blur(12px); box-shadow:var(--shadow-sm)}
+    .method-chip:nth-child(1){background:linear-gradient(180deg,rgba(223,247,214,.92) 0%, rgba(202,235,186,.92) 100%); border:1px solid rgba(139,188,113,.45)}
+    .method-chip:nth-child(2){background:linear-gradient(180deg,rgba(206,240,195,.92) 0%, rgba(180,225,159,.92) 100%); border:1px solid rgba(120,173,96,.45)}
+    .method-chip:nth-child(3){background:linear-gradient(180deg,rgba(236,250,220,.92) 0%, rgba(213,238,188,.92) 100%); border:1px solid rgba(165,198,131,.45)}
     .method-chip .t{font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--leaf-deep)}
     .method-chip .s{font-size:12.5px; color:var(--ink-2)}
     .method-panel{padding:26px; background:
-      radial-gradient(120% 100% at 100% 0%, rgba(47,184,75,.08), transparent 35%),
-      linear-gradient(180deg,var(--paper-2) 0%,var(--paper) 100%)}
+      radial-gradient(120% 100% at 100% 0%, rgba(47,184,75,.12), transparent 35%),
+      linear-gradient(180deg,#f5fbe9 0%,#edf7df 100%)}
     .method-panel .eyebrow{margin:0; background:transparent; border:none; box-shadow:none; padding:0; color:var(--sage)}
     .method-panel h3{margin:14px 0 10px; font-family:var(--disp); font-weight:800; font-size:clamp(28px,3vw,40px);
       letter-spacing:-.03em; line-height:.98; color:var(--bone)}
     .method-panel p{margin:0 0 18px; color:var(--ink-2); font-size:15px; line-height:1.65}
     .formula-stack{display:grid; gap:12px}
     .formula-card{display:grid; grid-template-columns:110px 1fr; align-items:center; gap:18px; padding:16px 18px;
-      border-radius:18px; background:var(--paper); border:1px solid var(--line); box-shadow:var(--shadow-sm)}
+      border-radius:18px; box-shadow:var(--shadow-sm)}
+    .formula-card:nth-child(1){background:linear-gradient(180deg,#e7f7da 0%, #d5edc4 100%); border:1px solid #b8d69f}
+    .formula-card:nth-child(2){background:linear-gradient(180deg,#dbf0cc 0%, #c7e6b3 100%); border:1px solid #abd08f}
+    .formula-card:nth-child(3){background:linear-gradient(180deg,#f1f9e3 0%, #dfeebf 100%); border:1px solid #c6dca5}
     .formula-card .name{font-family:var(--mono); font-size:14px; letter-spacing:.16em; text-transform:uppercase; color:var(--leaf-deep)}
     .formula-frac{display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:72px}
     .formula-frac .top,.formula-frac .bottom{font-family:var(--mono); font-size:15px; color:var(--ink)}
@@ -294,9 +305,12 @@
     .method-copy p b{color:var(--leaf-deep)}
     .method-table{width:100%; border-collapse:separate; border-spacing:0 8px}
     .method-table th{padding:0 16px 6px; font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--sage); text-align:left}
-    .method-table td{padding:14px 16px; background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); color:var(--ink)}
-    .method-table td:first-child{border-left:1px solid var(--line); border-top-left-radius:14px; border-bottom-left-radius:14px; font-family:var(--mono); color:var(--leaf-deep)}
-    .method-table td:last-child{border-right:1px solid var(--line); border-top-right-radius:14px; border-bottom-right-radius:14px; color:var(--ink-2)}
+    .method-table tbody tr:nth-child(1) td{background:linear-gradient(180deg,#edf9df 0%, #dcefc8 100%); border-top:1px solid #bfd9a9; border-bottom:1px solid #bfd9a9}
+    .method-table tbody tr:nth-child(2) td{background:linear-gradient(180deg,#def1ce 0%, #cae6b4 100%); border-top:1px solid #a9cd90; border-bottom:1px solid #a9cd90}
+    .method-table tbody tr:nth-child(3) td{background:linear-gradient(180deg,#f3fae6 0%, #e1efc9 100%); border-top:1px solid #cbddb2; border-bottom:1px solid #cbddb2}
+    .method-table td{padding:14px 16px; color:var(--ink)}
+    .method-table td:first-child{border-left:1px solid #bfd9a9; border-top-left-radius:14px; border-bottom-left-radius:14px; font-family:var(--mono); color:var(--leaf-deep)}
+    .method-table td:last-child{border-right:1px solid #bfd9a9; border-top-right-radius:14px; border-bottom-right-radius:14px; color:var(--ink-2)}
     .method-scale{margin-top:18px; padding-top:16px; border-top:1px solid var(--line)}
     .method-scale .bar{height:16px; border-radius:999px; background:linear-gradient(90deg,#ea3d2f 0%, #ff8a1a 22%, #f4ea2e 50%, #96f611 72%, #2fb84b 100%);
       box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}
